@@ -1,0 +1,56 @@
+.container {
+    border: thin solid black;
+    height: 300px;
+    padding: 10px;
+}
+
+.container img {
+    width: 200px;
+    float: left;
+    margin: 10px
+}
+
+.container a {
+    text-decoration: none;
+    border-radius: 25px;
+    background: blue;
+    width: 30px;
+    color: white;
+    padding: 10px;
+}
+
+.container p, .list p {
+    width: 50%;
+    float: left;
+}
+
+.list .item {
+    clear: both;
+}
+
+.container img, .list img {
+    width: 100px;
+    float: left;
+    margin: 10px
+}
+
+.paginator {
+    clear: both;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+#loader img {
+    width: 100px;
+    position: fixed;
+    left: 50%;
+    top: 35%;
+    z-index: 1000;
+    display: none;
+}
+
+#errors {
+    /*display: none;*/
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript"
+            src="/js/beer.js"></script>
+    <link rel="stylesheet"
+          type="text/css"
+          href="/css/style.css"/>
+</head>
+
+<body>
+
+{% include 'header.html' %}
+
+<h1>Distilled SCH Beer Application</h1>
+
+<div class="container"
+     data-brewery="{{ beer.brewery }}">
+    <div id="name">
+        {{ beer.name }}
+    </div>
+    <div>
+        <img id="avatar"
+             src="{{ beer.imgPath }}">
+
+        <p id="description">
+            {{ beer.description }}
+        </p>
+
+        <div>
+            <a id="random"
+               href="">Another Beer</a>
+        </div>
+    </div>
+
+
+</div>
+<div id="loader"><img src="/img/loader.gif"/></div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+{
+  "name": "sabrina/daftbeermarket",
+  "description": "Daft beer market",
+  "homepage": "http://framework.zend.com/",
+  "autoload": {
+    "psr-4": {
+      "Application\\": "module/Application/src/Application",
+      "Account\\": "module/Account/src/Account",
+      "Api\\": "module/Api/src/Api",
+      "Auth\\": "module/Auth/src/Auth",
+      "Bpay\\": "module/Bpay/src/Bpay",
+      "CustomerSupport\\": "module/CustomerSupport/src/CustomerSupport",
+      "Email\\": "module/Email/src/Email",
+      "FollowOnRedirect\\": "module/FollowOnRedirect/src/FollowOnRedirect",
+      "Funds\\": "module/Funds/src/Funds",
+      "HealthCheck\\": "module/HealthCheck/src/HealthCheck",
+      "IdentityVerification\\": "module/IdentityVerification/src/IdentityVerification",
+      "Mfa\\": "module/Mfa/src/Mfa",
+      "Mixpanel\\": "module/Mixpanel/src/Mixpanel",
+      "Onboarding\\": "module/Onboarding/src/Onboarding",
+      "PaymentCard\\": "module/PaymentCard/src/PaymentCard",
+      "RateGraph\\": "module/RateGraph/src/RateGraph",
+      "Registration\\": "module/Registration/src/Registration",
+      "Worldpay\\": "module/Worldpay/src/Worldpay",
+      "Xero\\": "module/Xero/src/Xero",
+      "SFramework\\": "lib/SFramework",
+      "BeerMarket\\": "app/BeerMarket"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ApplicationTest\\": "module/Application/test/ApplicationTest",
+      "AccountTest\\": "module/Account/test/AccountTest",
+      "ApiTest\\": "module/Api/test/ApiTest",
+      "AuthTest\\": "module/Auth/test/AuthTest",
+      "BpayTest\\": "module/Bpay/test/BpayTest",
+      "FundsTest\\": "module/Funds/test/FundsTest",
+      "IdentityVerificationTest\\": "module/IdentityVerification/test/IdentityVerificationTest",
+      "MfaTest\\": "module/Mfa/test/MfaTest",
+      "PaymentCardTest\\": "module/PaymentCard/test/PaymentCardTest",
+      "RateGraphTest\\": "module/RateGraph/test/RateGraphTest",
+      "RegistrationTest\\": "module/Registration/test/RegistrationTest",
+      "WorldpayTest\\": "module/Worldpay/test",
+      "XeroTest\\": "module/Xero/test/XeroTest"
+    }
+  },
+  "require": {
+    "symfony/routing": "^3.3",
+    "symfony/yaml": "^3.3",
+    "symfony/config": "^3.3",
+    "guzzlehttp/guzzle": "^6.3",
+    "symfony/http-foundation": "^3.3",
+    "symfony/http-kernel": "^3.3",
+    "symfony/event-dispatcher": "^3.3",
+    "twig/twig": "~1.0",
+    "symfony/dependency-injection": "^3.3",
+    "mikey179/vfsStream": "^1.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5"
+  }
+}

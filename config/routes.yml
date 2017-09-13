@@ -1,0 +1,15 @@
+beermarket-index:
+    path:     /
+    defaults: { _controller: 'BeerMarket\Controller\RandomController', _action: 'index' }
+
+beermarket-random:
+    path:     /random
+    defaults: { _controller: 'BeerMarket\Controller\RandomController', _action: 'index' }
+
+beermarket-search:
+    path:     /search
+    defaults: { _controller: 'BeerMarket\Controller\SearchController', _action: 'index' }
+
+beermarket-search:
+    path:     /search/submit
+    defaults: { _controller: 'BeerMarket\Controller\SearchController', _action: 'search' }

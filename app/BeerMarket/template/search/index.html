@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <!--<script type="text/javascript"-->
+    <!--src="/js/search.js"></script>-->
+    <link rel="stylesheet"
+          type="text/css"
+          href="/css/style.css"/>
+</head>
+
+<body>
+
+{% include 'header.html' %}
+
+<h1>Search</h1>
+
+<div id="errors">
+    {% for field, message in errors %}
+    <p>{{ message }}</p>
+    {% endfor %}
+</div>
+<div>
+    <form id="search_form"
+          method="post">
+        <input type="text"
+               name="search"
+               placeholder="search"
+               value="{{ searchParams.search }}"/>
+        <input type="radio"
+               name="type"
+               value="{{ beerValue }}"
+               {%
+               if
+               searchParams.type==
+               beerValue
+               %}
+               checked="checked"
+               {%
+               endif
+               %}/>Beer
+        <input type="radio"
+               name="type"
+               value="{{ breweryValue }}"
+               {%
+               if
+               searchParams.type==
+               breweryValue
+               %}
+               checked="checked"
+               {%
+               endif
+               %}/>Brewery
+        <input type="submit"
+               value="Search"/>
+    </form>
+</div>
+<br>
+
+<div id="list"
+     class="list">
+    {% for item in data %}
+    <div class="item">
+        <div class="name">
+            {{ item.name }}
+        </div>
+        <div>
+            <img class="avatar"
+                 src="{{ item.imgPath }}">
+
+            <p class="description">
+                {{ item.description }}
+            </p>
+        </div>
+        <br>
+    </div>
+    {% endfor %}
+</div>
+
+<div id="loader"><img src="/img/loader.gif"/></div>
+</body>
+
+</html>
